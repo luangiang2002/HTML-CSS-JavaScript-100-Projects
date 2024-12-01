@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background:rgb(91, 91, 235);
+}
+.wrapper {
+    display: flex;
+   justify-content: center;  /* Căn giữa theo chiều ngang */
+   align-items: center;      /* Căn giữa theo chiều dọc */
+   height: 100vh;
+}
+.wrapper .loader {
+    display: flex;
+   
+}
+.wrapper .loader .loading{
+    width: 25px;
+    height: 25px;
+    background: white;
+    margin: 0 10px;
+    border-radius: 50%;
+    animation:load 0.8s ease infinite ;
+}
+.wrapper .loader .loading.one{
+    animation-delay: 0.3s;
+}
+.wrapper .loader .loading.two{
+    animation-delay: 0.4s;
+}
+.wrapper .loader .loading.three{
+    animation-delay: 0.5s;
+}
+@keyframes load{
+    0% {
+        width: 25px;
+        height: 25px;
+      }
+      50% {
+       width: 35px;
+       height: 35px;
+      }
+      /* 100% {
+        width: 40px;
+        height: 40px;
+      } */
+}
