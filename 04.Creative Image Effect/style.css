@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+ .container{
+    width: 60%;
+    height: 600px;
+    background: #fff;
+    position: relative;
+}
+.container .clip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.8s ease; /* Hiệu ứng mượt mà khi hover */
+}
+.clip1{
+    background:url(https://images.unsplash.com/photo-1437913135140-944c1ee62782?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fHdvbWFufGVufDB8fDB8fHww);
+
+    clip-path: polygon(31% 0, 60% 100%, 0 100%, 0 0);
+} 
+ .clip2{
+    background:url(https://plus.unsplash.com/premium_photo-1694557636097-5969bae91ba8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d29tYW58ZW58MHx8MHx8fDA%3D);
+
+    clip-path: polygon(100% 0, 100% 100%, 49% 100%, 65% 0);
+}
+.clip3{
+    background:url(https://plus.unsplash.com/premium_photo-1688385848467-781c5394c017?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHdvbWFufGVufDB8fDB8fHww);
+    clip-path: polygon(80% 0, 60% 100%, 33% 100%, 22% 0);
+}
+.container .clip:hover {
+    width: 100%; /* Mở rộng ảnh khi hover */
+    z-index: 1; /* Đưa ảnh lên trên */
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+} 
