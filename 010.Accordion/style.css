@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: crimson;
+}
+#acccordion{
+    margin: 100px auto;
+    width: 60%;
+}
+li{
+    list-style: none;
+    background: #fff;
+    line-height: 25px;
+    margin: 10px 0;
+}
+#acccordion li label{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    color: darkcyan;
+    margin: 0 10px;
+}
+#acccordion li label +input[type='radio']{
+    display: none;
+}
+#acccordion li label span{
+    transform: rotate(90deg);
+    font-size: 22px;
+}
+#acccordion .content{
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+#acccordion  label + input[type='radio']:checked +.content{
+    max-height: 400px;
+}
